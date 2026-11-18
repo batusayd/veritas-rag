@@ -161,7 +161,7 @@ flowchart TB
 ### 1. Reciprocal Rank Fusion (RRF) Hybrid Search
 Rather than relying on arbitrary linear score weights between incompatible vector spaces (Cosine $\in [-1, 1]$ vs. unbounded BM25 scores), **VeritasRAG** fuses candidate rankings server-side in Qdrant using Reciprocal Rank Fusion:
 
-$$\text{RRF\_Score}(d \in D) = \sum_{m \in \{\text{dense}, \text{sparse}\}} \frac{1}{k + r_m(d)}$$
+$$\operatorname{RRF}(d) = \sum_{m \in \{\text{dense},\,\text{sparse}\}} \frac{1}{k + r_m(d)}$$
 
 where $r_m(d)$ is the rank of document chunk $d$ under retrieval modality $m$ and $k$ is the ranking constant. Passages that rank highly in **both** semantic meaning and exact keyword overlap are promoted to the top of the candidate pool.
 
