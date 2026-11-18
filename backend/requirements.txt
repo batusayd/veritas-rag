@@ -1,0 +1,25 @@
+# Web Framework & Async Runtime
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+pydantic==2.10.2
+pydantic-settings==2.6.1
+httpx==0.28.0
+
+# AI, LLM & Structured Output Pipeline
+litellm==1.53.1
+openai==1.55.3
+
+# Vector Database & Hybrid Retrieval (Dense + Sparse BM25/SPLADE + Cross-Encoder)
+qdrant-client==1.12.1
+fastembed==0.4.2
+flashrank==0.2.9
+
+# Document Parsing & Text Processing
+PyMuPDF==1.24.14
+tiktoken==0.8.0
+
+# Testing & Code Quality
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
